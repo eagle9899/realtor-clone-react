@@ -6,6 +6,7 @@ import SignIn from './Pages/SignIn';
 import ForgotPassword from './Pages/ForgotPassword';
 import SignUp from './Pages/SignUp';
 import { HelmetProvider } from 'react-helmet-async';
+import Header from './Components/Header';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       
       <HelmetProvider>
         <BrowserRouter>
+          <Header />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/profile' element={<Profile />} />
