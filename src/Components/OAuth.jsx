@@ -29,6 +29,7 @@ export default function OAuth() {
         });
       }
       navigate("/");
+      toast.success("User added successfully");
     } catch (error) {
       toast.error("Could not authorize with google");
       console.log(error);
