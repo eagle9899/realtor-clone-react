@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const location = useLocation();
-  console.log(location.pathname);
 
   function pathMathRoute(route) {
     if (route === location.pathname) {

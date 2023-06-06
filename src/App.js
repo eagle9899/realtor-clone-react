@@ -7,6 +7,8 @@ import ForgotPassword from './Pages/ForgotPassword';
 import SignUp from './Pages/SignUp';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './Components/Header';
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css'; 
 
 function App() {
   return (
@@ -24,6 +26,18 @@ function App() {
             <Route path='/forgot-password' element={<ForgotPassword />} />
           </Routes>
         </BrowserRouter>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme='dark'
+        />
       </HelmetProvider>
     </>
   );
