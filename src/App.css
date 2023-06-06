@@ -3,7 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-.active{
-  color: goldenrod;
+body{
+  background: rgb(240, 253, 244);
 }
+/* .active{
+  color: goldenrod;
+} */
