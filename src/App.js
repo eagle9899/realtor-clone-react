@@ -30,7 +30,9 @@ function App() {
             <Route path='/sign-up' element={<SignUp />} />
             <Route path='/offers' element={<Home />} />
             <Route path='/forgot-password' element={<ForgotPassword />} />
-            <Route path='/create-lists' element={<CreateListing />} />
+            <Route path='/create-lists' element={<PrivateRoute />}>
+              <Route path='/create-lists' element={<CreateListing />} />
+            </Route>
           </Routes>
         </BrowserRouter>
         <ToastContainer
