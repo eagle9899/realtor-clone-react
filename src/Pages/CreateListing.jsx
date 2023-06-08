@@ -166,6 +166,7 @@ export default function CreateListing() {
       imgUrls,
       geoLocation,
       timestamp: serverTimestamp(),
+      userRef: auth.currentUser.uid,
     };
     delete formDataCopy.images;
     !formDataCopy.offer && delete formDataCopy.discountPrice;
@@ -179,6 +180,7 @@ export default function CreateListing() {
   if (loading) {
     return <Spinner />;
   }
+
   return (
     <main className="max-w-md px-2 mx-auto">
       <h1 className="text-3xl text-center mt-6 font-bold">Create a List</h1>
