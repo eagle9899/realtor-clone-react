@@ -13,6 +13,7 @@ import PrivateRoute from './Components/PrivateRoute';
 import CreateListing from './Pages/CreateListing';
 import EditListing from './Pages/EditListing';
 import Listing from './Pages/Listing';
+import Offers from './Pages/Offers';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
 
             <Route path='/sign-in' element={<SignIn />} />
             <Route path='/sign-up' element={<SignUp />} />
-            <Route path='/offers' element={<Home />} />
+            <Route path='/offers' element={<Offers />} />
             <Route path='/forgot-password' element={<ForgotPassword />} />
             <Route path='/category/:categoryName/:listId' element={<Listing />} />
             <Route path='/create-lists' element={<PrivateRoute />}>
