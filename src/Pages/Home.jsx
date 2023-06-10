@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import Slider from "../Components/Slider";
+import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
+import { db } from "../firebase";
+import Spinner from "../Components/Spinner";
 
 export default function Home() {
   return (
@@ -8,7 +12,7 @@ export default function Home() {
         <title>Home</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <h1>Hello World</h1>
+      <Slider />
     </div>
   );
 }
