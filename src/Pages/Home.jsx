@@ -9,8 +9,7 @@ import {
   query,
   where,
 } from "firebase/firestore";
-import { db } from "../firebase";
-import Spinner from "../Components/Spinner";
+import { db } from "../firebase"; 
 import { Link } from "react-router-dom";
 import ListingItem from "../Components/ListingItem";
 
