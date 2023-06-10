@@ -16,6 +16,7 @@ import { db } from "../firebase";
 import { FcHome } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import ListingItem from "../Components/ListingItem";
+import { Helmet } from "react-helmet-async";
 export default function Profile() {
   const navigate = useNavigate();
   const [changeDetail, setChangeDetail] = useState(false);
@@ -102,6 +103,9 @@ export default function Profile() {
 
   return (
     <>
+      <Helmet>
+        <title>Profile</title>
+      </Helmet>
       <section className="max-w-6xl mx-auto flex justify-center items-center flex-col">
         <h1 className="text-3xl text-center mt-6 font-bold">My Profile</h1>
         <div className="w-full md:w-[50%] mt-6 px-3">

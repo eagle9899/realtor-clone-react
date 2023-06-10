@@ -19,6 +19,7 @@ import {
 } from "firebase/firestore";
 import { db } from "./../firebase";
 import { useNavigate, useParams } from "react-router";
+import { Helmet } from "react-helmet-async";
 export default function EditListing() {
   const navigate = useNavigate();
   const auth = getAuth();
@@ -218,6 +219,9 @@ export default function EditListing() {
 
   return (
     <main className="max-w-md px-2 mx-auto">
+      <Helmet>
+        <title>Edit Listing</title>
+      </Helmet>
       <h1 className="text-3xl text-center mt-6 font-bold">Edit a List</h1>
       <form onSubmit={onFormSubmit}>
         <p className="text-lg mt-6 font-semibold">Sale / Rent</p>

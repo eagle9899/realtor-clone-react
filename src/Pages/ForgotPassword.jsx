@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import OAuth from "../Components/OAuth";
 import { toast } from "react-toastify";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
   function onChange(e) {
@@ -21,6 +22,9 @@ export default function ForgotPassword() {
   }
   return (
     <section>
+      <Helmet>
+        <title>Forgot Password</title>
+      </Helmet>
       <h1 className="text-3xl text-center mt-4 font-bold">Forgot Password</h1>
       <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto">
         <div className="md:w-[67%] lg:w-[50%] mb-12">

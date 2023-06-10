@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import OAuth from "../Components/OAuth";
 import { toast } from "react-toastify";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -32,6 +33,9 @@ export default function SignIn() {
   }
   return (
     <section>
+      <Helmet>
+        <title>Sign In</title>
+      </Helmet>
       <h1 className="text-3xl text-center mt-4 font-bold">Sign In</h1>
       <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto">
         <div className="md:w-[67%] lg:w-[50%] mb-12">

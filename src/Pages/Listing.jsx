@@ -18,6 +18,7 @@ import { FaBath, FaParking, FaChair } from "react-icons/fa";
 import { getAuth } from "firebase/auth";
 import Contact from "../Components/Contact";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { Helmet } from "react-helmet-async";
 
 export default function Listing() {
   const auth = getAuth();
@@ -43,6 +44,9 @@ export default function Listing() {
   }
   return (
     <main>
+      <Helmet>
+        <title>Listing</title>
+      </Helmet>
       <Swiper
         slidesPerView={1}
         navigation

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* to remove scroll bar in chrome */
+html::-webkit-scrollbar{
+    display: none;
+}
+
+/* to remove scroll bar in fire fox */
+html{
+    scrollbar-width: none;
+}

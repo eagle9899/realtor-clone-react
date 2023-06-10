@@ -12,6 +12,7 @@ import { v4 as uuidv4 } from "uuid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "./../firebase";
 import { useNavigate } from "react-router";
+import { Helmet } from "react-helmet-async";
 export default function CreateListing() {
   const navigate = useNavigate();
   const auth = getAuth();
@@ -183,6 +184,9 @@ export default function CreateListing() {
 
   return (
     <main className="max-w-md px-2 mx-auto">
+      <Helmet>
+        <title>Create Listing</title>
+      </Helmet>
       <h1 className="text-3xl text-center mt-6 font-bold">Create a List</h1>
       <form onSubmit={onFormSubmit}>
         <p className="text-lg mt-6 font-semibold">Sale / Rent</p>
